@@ -4,17 +4,13 @@
 }
 
 body {
-    background-image: url(topdesktop.svg);
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: top left;
+    background-color: #fafafa;
 }
 
-
 .parent {
+    position: absolute;
     width: 80%;
     height: 90%;
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -24,236 +20,190 @@ body {
     -o-transform: translate(-50%, -50%);
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
-.top,
-.bottom {
+.level1 {
     width: 100%;
-    height: 50%;
+    height: 20%;
+    text-align: center;
+    line-height: 15px;
+    margin-bottom: 50px;
 }
 
-.top {
-    display: flex;
+.level1 h2 {
+    margin-top: 18px;
 }
 
-
-.left,
-.right {
-    width: 50%;
-    height: 100%;
+.level1 p:first-of-type {
+    opacity: 60%;
+    font-size: 1.5em;
+    margin-bottom: 0;
 }
 
-.top .left .users {
-    color: #551f56;
-    font-weight: bold;
-    font-size: 70px;
-    font-family: "League Spartan", sans-serif;
-
-}
-
-.top .left p {
-    color: black;
+.level1 .des {
     opacity: 50%;
-    padding-right: 50px;
+    font-size: 14px;
+    line-height: 22px;
 }
 
-.right {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-}
-
-.one {
-    grid-area: 1 / 1 / 2 / 4;
-}
-
-.two {
-    grid-area: 2 / 2 / 3 / 5;
-}
-
-.three {
-    grid-area: 3 / 3 / 4 / 6;
-}
-
-.one,
-.two,
-.three {
-    background-color: #f7f2f8;
+.level2 {
+    width: 100%;
+    height: 80%;
     display: flex;
-    margin-bottom: 20px;
-    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col1 {
+    width: calc(100%/3.5);
+    height: 100%;
+    margin-right: 3px;
+    display: flex;
+    justify-content: center;
+}
+
+.col1 .boxcol1 {
+    width: 90%;
+    height: 40%;
+    align-self: center;
+}
+
+.col2 {
+    width: calc(100%/3.5);
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row1,
+.row2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boxrow1,
+.boxrow2 {
+    width: 90%;
+    height: 80%;
+}
+
+.row1 {
+    margin-bottom: 0px;
+}
+
+
+.col3 {
+    width: calc(100%/3.5);
+    height: 100%;
+    margin-left: 3px;
+    display: flex;
+    justify-content: center;
+}
+
+.col3 .boxcol3 {
+    width: 90%;
+    height: 40%;
+    align-self: center;
+}
+
+.boxcol1,
+.boxrow1,
+.boxrow2,
+.boxcol3 {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    background-color: white;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    box-shadow: 0px 11px 7px 0px #dedede;
 }
 
-
-.right .rate {
-    font-size: 18px;
-    font-weight: bold;
-    color: #551f56;
-    line-height: 30px;
+.boxcol1 {
+    border-top: solid 4px #9af2f3;
 }
 
-.right div img {
-    margin-right: 8px;
-    width: 10px;
+.boxcol3 {
+    border-top: solid 4px #4a99db;
 }
 
+.boxrow1 {
+    border-top: solid 4px red;
 
-.bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
 }
 
-.first,
-.second,
-.third {
-    width: 32%;
-    height: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #511f50;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    padding: 30px;
+.boxrow2 {
+    border-top: solid 4px orange;
+
 }
 
-.header {
-    display: flex;
+h4 {
+    text-transform: capitalize;
 }
 
-.imagecontainer img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+.first h4 {
+    margin-bottom: 0px;
 }
 
-.first,
-.second,
-.third p {
-    font-size: 18px;
-    color: white;
-}
-
-.title .name {
-    font-family: "League Spartan", sans-serif;
-    font-weight: bold;
-    color: white;
-}
-
-.title .verify {
-    color: #9f3a77;
-}
-
-.title {
-    margin-left: 30px;
-    padding-top: 10px;
-}
-
-.second {
-    align-self: center;
-}
-
-.third {
-    align-self: flex-end;
+.first p {
+    font-size: 14px;
+    opacity: 50%;
 }
 
 @media (max-width:391px) {
-    body {
-        background-image: url(topmobile.svg) !important;
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-position: top left;
-    }
-
     .parent {
         width: 90%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        overflow: scroll;
     }
 
-    .top {
+    .level1 p:first-of-type,
+    .level1 h2 {
+        font-size: 23px;
+    }
+
+    .des br {
+        display: none;
+    }
+
+    .level1 .des {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .col1,
+    .col2,
+    .col3 {
+        width: 100%;
+    }
+
+    .col1,
+    .col3 {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        align-items: flex-start;
         height: auto;
     }
 
-    .left {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .right {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center !important;
-        width: 100%;
-        height: auto;
-        margin-bottom: 30px;
-    }
-
-
-    .left .users {
-        text-align: center;
-        font-size: 60px !important;
-    }
-
-    .left p {
-        text-align: center;
-        padding-right: 0 !important;
+    .col1 .boxcol1 {
+        height: 100%;
 
     }
 
-    .one,
-    .two,
-    .three {
-        width: 100%;
-        padding: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        height: 80px;
-        margin-bottom: 8px !important;
+    .col1,
+    .col3 {
+        margin-bottom: 50px;
     }
 
-    .right .rate {
-        width: 100%;
-        line-height: initial;
+    .col3 .boxcol3 {
+        height: 100%;
     }
 
-    .right img {
-        height: 15px;
-        width: 15px;
-
-    }
-
-    .bottom {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .first,
-    .second,
-    .third {
-        width: 100%;
-        margin-bottom: 10px;
-    }
 }
